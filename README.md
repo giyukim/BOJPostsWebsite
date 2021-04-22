@@ -1,2 +1,4 @@
-# BOJPostsWebsite
-BOJ 문제풀이 업로드를 위한 게시판 사이트 제작 (Python Djnago)
+Make BOJ solving posts Website by using Python [Django](https://www.djangoproject.com/)
+
+> Commit
+> 1. 210422 : Start Project, make pages templates
