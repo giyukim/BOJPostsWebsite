@@ -1,29 +1,32 @@
-{% load static %} 
+{% load static %}
 <!DOCTYPE html>
-<html lang='ko'>
-    <head>
+<html lang="ko">
+    <head> 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Test | posts</title>
-
+        <title>Test | newpost</title>
+        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
     </head>
     <body>
         <h2>Test Page</h2>
-        <h3>posts.html</h3>
-        
-        <table>
-        {% for list in postlist %}
-            <ul>
-                <li><a href="{{list.pk}}/">{{list.title}}</a></li>
-            </ul>
-        {% endfor %}
-        </table>
+        <h3>newpost.html</h3>
 
-        <button><a href="/newpost/">New Post</a></button>
+        <form method="POST">
+            {% csrf_token %}
+            Title<br>
+            <input type="text" name="title"><br>
+            Problem Link<br>
+            <input type="text" name="plink"><br>
+            Code<br>
+            <textarea rows="100" cols="500" name="code"></textarea><br>
+            Content<br>
+            <textarea rows="100" cols="500" name="content"></textarea><br>
+            <input type="submit" value="Upload">
+        </form>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     </body>

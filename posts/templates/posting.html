@@ -1,14 +1,30 @@
-<html>
+{% load static %}
+<!DOCTYPE html>
+<html lang='ko'>
     <head>
-        <title>Posting {{post.title}}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Test | posting</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
     </head>
     <body>
-        <h1>게시글 개별 페이지입니다</h1>
+        <h2>Test Page</h2>
+        <h3>posting.html</h3>
+
+        <a href="/posts/">목록</a>
+
         <p>{{post.title}}</p>
         <p>{{post.date}}</p>
         <p>{{post.plink}}</p>
         <p>{{post.code}}</p>
         <p>{{post.content}}</p>
-        <a href="/posts/">목록</a>
+
+        <a href="/posts/{{post.pk}}/remove">Delete</a>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     </body>
 </html>
