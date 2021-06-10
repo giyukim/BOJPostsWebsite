@@ -7,3 +7,4 @@ Make BOJ solving posts Website by using Python [Django](https://www.djangoprojec
 > 4. 210525 : Login, Register Forms and navbar lnk
 > 5. 210527 : CSS Design
 > 6. 210603 : Login Form Design completed
+> 7. 210610 : Register From Design
