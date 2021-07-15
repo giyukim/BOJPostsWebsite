@@ -8,3 +8,4 @@ Make BOJ solving posts Website by using Python [Django](https://www.djangoprojec
 > 5. 210527 : CSS Design
 > 6. 210603 : Login Form Design completed
 > 7. 210610 : Register From Design
+> 8. 210715 : Complete Posts Page
